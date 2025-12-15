@@ -1,4 +1,6 @@
-package ObjectData;
+package ObjectData.RequestObject;
+
+import ObjectData.RequestPreparation;
 
 import java.util.HashMap;
 
