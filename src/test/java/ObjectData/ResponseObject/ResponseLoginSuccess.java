@@ -20,5 +20,4 @@ public class ResponseLoginSuccess {
     public List<UserDetails> getUserDetails() {
         return userDetails;
     }
-
 }
