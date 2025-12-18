@@ -25,6 +25,7 @@ public class RequestLogin implements RequestPreparation {
                     break;
             }
         }
+        adjustObjectVariable();
     }
 
     private void adjustObjectVariable() {

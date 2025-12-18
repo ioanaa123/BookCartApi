@@ -39,6 +39,5 @@ public class LoginTest {
         System.out.println(responseLoginSuccess.getUserDetails().getUserId());
         System.out.println(responseLoginSuccess.getUserDetails().getUsername());
         System.out.println(responseLoginSuccess.getUserDetails().getUserTypeName());
-
     }
 }
