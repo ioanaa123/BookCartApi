@@ -1,7 +1,7 @@
-package ServiceImplementation;
+package Service.ServiceImplementation;
 
-import InterfaceService.AccountServiceInterface;
-import ObjectData.RequestObject.RequestAccount;
+import Service.InterfaceService.AccountServiceInterface;
+import ObjectData.RequestObject.RequestUserRegistration;
 import ObjectData.RequestObject.RequestLogin;
 import Service.ApiService.AccountApiService;
 import io.restassured.response.Response;
@@ -15,7 +15,7 @@ public class AccountServiceImpl implements AccountServiceInterface {
     }
 
     @Override
-    public Response createAccount(RequestAccount body) {
+    public Response createAccount(RequestUserRegistration body) {
         return accountApiService.post(body, "/User");
     }
 

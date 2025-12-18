@@ -1,4 +1,4 @@
-package ServiceImplementation;
+package Service;
 
 import RestClient.RequestType;
 import RestClient.RestClient;

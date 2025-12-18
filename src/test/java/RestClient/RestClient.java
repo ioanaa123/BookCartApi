@@ -6,7 +6,7 @@ import io.restassured.specification.RequestSpecification;
 public class RestClient {
     private RequestSpecification prepareClient(RequestSpecification requestSpecification){
         requestSpecification.baseUri("https://bookcart.azurewebsites.net/api");
-        requestSpecification.contentType("application/json");
+        //requestSpecification.contentType("application/json");
 
         return requestSpecification;
     }

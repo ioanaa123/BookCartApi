@@ -4,7 +4,7 @@ import ObjectData.RequestPreparation;
 
 import java.util.HashMap;
 
-public class RequestAccount implements RequestPreparation {
+public class RequestUserRegistration implements RequestPreparation {
 
     private String username;
     private String firstName;
@@ -13,7 +13,7 @@ public class RequestAccount implements RequestPreparation {
     private String confirmPassword;
     private String gender;
 
-    public RequestAccount(HashMap<String, String> testData) {
+    public RequestUserRegistration(HashMap<String, String> testData) {
         prepareObject(testData);
     }
 

@@ -1,23 +1,31 @@
 package ObjectData.ResponseObject;
 
-import ObjectData.UserDetailsObject.UserDetails;
+import ObjectData.UserDetails;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class ResponseLoginSuccess {
 
-    @JsonProperty("token")
     private String token;
 
-    @JsonProperty("userDetails")
-    private List<UserDetails> userDetails;
+    private UserDetails userDetails;
 
     public String getToken() {
         return token;
     }
+    public void setToken(String token) {
+        this.token = token;
+    }
 
-    public List<UserDetails> getUserDetails() {
+    public UserDetails getUserDetails() {
         return userDetails;
+    }
+
+    public void setUserDetails(UserDetails userDetails) {
+        this.userDetails = userDetails;
     }
 }

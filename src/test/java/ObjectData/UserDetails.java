@@ -1,4 +1,4 @@
-package ObjectData.UserDetailsObject;
+package ObjectData;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -12,7 +12,7 @@ public class UserDetails {
     @JsonProperty("userTypeName")
     private String userTypeName;
 
-    public String userId() {
+    public String getUserId() {
         return userId;
     }
 

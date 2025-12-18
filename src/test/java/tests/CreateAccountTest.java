@@ -1,26 +1,30 @@
 package tests;
 
-import ObjectData.RequestObject.RequestAccount;
+import Actions.AccountActions;
+import ObjectData.RequestObject.RequestUserRegistration;
 import PropertyUtility.PropertyUtility;
-import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
 public class CreateAccountTest {
+
+    public AccountActions accountActions;
+
     @Test
     public void testMethod(){
+        System.out.println("Step1: Create new account");
+        createAccount();
+        System.out.println("End of step 1");
+    }
 
-        RequestSpecification requestSpecification = RestAssured.given();
-        requestSpecification.baseUri("https://bookcart.azurewebsites.net/api");
-        requestSpecification.contentType("application/json");
+    public void createAccount(){
+        accountActions = new AccountActions();
 
         PropertyUtility propertyUtility = new PropertyUtility("RequestData/createAccountData");
-        RequestAccount requestAccountBody = new RequestAccount(propertyUtility.getAllData());
-        requestSpecification.body(requestAccountBody);
+        RequestUserRegistration requestAccountBody = new RequestUserRegistration(propertyUtility.getAllData());
+        accountActions.userRegistrationAccount(requestAccountBody);
 
-        Response response = requestSpecification.post("/User");
-        System.out.println(response.getStatusCode());
-        System.out.println(response.getStatusLine());
+//        System.out.println(response.getStatusCode());
+//        System.out.println(response.getStatusLine());
     }
 }
